@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Desafio Evolvy</title>
+</head>
+<body>
+    <main>
+        <nav>
+            <h1>Desafio Evolvy</h1>
+        </nav>
+        <section>
+            <form>
+                <label for="nome"> Nome Completo</label>
+                <input type="text" id="nome" name="nome" maxlength="100">
+                <div class="telefone">
+                    <input type="radio" id="celular" name="telefone" value="Celular">
+                    <label for="celular">Celular</label>
+                    <input type="radio" id="fixo" name="telefone" value="Fixo">
+                    <label for="fixo">Telefone Fixo</label>
+                </div>
+                <label for="email"> Email</label>
+                <input type="email" id="email" name="email">
+                <label for="numero"> Número</label>
+                <input type="number" id="numero" name="numero"
+                min="1" max="999">
+                <input type="submit" id="submit" name="submit">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
