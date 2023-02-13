@@ -10,14 +10,14 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
-    margin: 0% 25%;
+    margin: 0% 35%;
 }
 label {
     font-size: 20px;
     font-weight: 600;
     margin: 15px 0 12px 0;
 }
-input#nome, input#email, input#numero {
+input#nome, input#telefone, input#email, input#numero {
     border: solid 3px;
     font-size: 18px;
     padding: 10px;
