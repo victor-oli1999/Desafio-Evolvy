@@ -12,10 +12,12 @@
     <title>Desafio Evolvy</title>
 </head>
 <body>
-    <main>
+    <header>
         <h1>Desafio Evolvy</h1>
+    </header>
+    <main>
         <section>
-            <form>
+            <form action="./Paginas/resposta.html" method="post">
                 <label for="nome"> Nome Completo</label>
                 <input type="text" id="nome" name="nome" maxlength="100"
                     pattern="[a-z-A-Z-\s]{1,100}" title="Somente letras"
@@ -30,7 +32,8 @@
                 <label for="numero"> Número</label>
                 <input type="number" id="numero" name="numero"
                 min="1" max="999" placeholder="De 1 a 999" required>
-                <input class="button" type="submit" id="submit" name="submit">
+                <input class="button" type="submit" id="submit" name="submit"
+                value="Enviar">
             </form>
         </section>
     </main>

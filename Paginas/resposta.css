@@ -1,0 +1,36 @@
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 0% 25%;
+}
+#conteudo {
+    background: #fff;
+    border: solid 3px;
+    margin-top: 20px;
+}
+
+/* DROPDOWN */
+ol {
+    margin: 0 15px;
+}
+.ver-mais {
+    text-align: center;
+    border-top: solid;
+    cursor: pointer;
+    margin-bottom: 0px;
+    padding: 5px;
+}
+.none {
+    display: none;
+}
+
+/* BOTÃO */
+a {
+    margin-top: 25px;
+    text-align: center;
+    height: 51px;
+    width: 150px;
+}
+#botao {
+    margin-top: 0px;
+}
