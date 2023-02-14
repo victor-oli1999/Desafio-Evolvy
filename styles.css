@@ -3,8 +3,9 @@ body {
     font-family: "Inter";
 }
 h1 {
-    text-align: center;
     font-size: 60px;
+    margin: 30px 0 20px 0;
+    text-align: center;
 }
 /* FORMULÁRIO */
 form {
@@ -25,12 +26,10 @@ input#nome, input#telefone, input#email, input#numero {
 :focus {
     outline-offset: 2px;
 }
-
-/* TELEFONE/CELULAR */
-
 /* BOTÃO */
 input#submit {
     background: #fff;
+    border-color: #000;
     font-size: 20px;
     font-weight: 600;
     margin-top: 25px;
@@ -40,6 +39,7 @@ input#submit {
 input#submit:hover {
     background: #000;
     color: #fff;
+    cursor: pointer;
     outline: navy dashed 2px;
     outline-offset: 2px
 }
