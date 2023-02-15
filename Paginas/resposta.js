@@ -11,7 +11,6 @@ function mostrarResultado() {
     const numero = data.numero;
 
     /* Checar qual resultado será mostrado*/
-    let textoResposta = "";
     if (numero % 3 === 0) {
         /* O nome completo é separado atraves do método split. */
         /* o espaço em branco é onde a string é cortada.*/
