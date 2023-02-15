@@ -10,8 +10,8 @@ main {
 }
 h2 {
     text-align: center;
+    margin: 55px 0;
 }
-
 /* DROPDOWN */
 ol {
     margin: 0 15px;
@@ -36,8 +36,8 @@ ol {
 }
 .certo {
     color: green;
+    font-weight: 500;
 }
-
 /* BOTÃO */
 a {
     margin-top: 25px;
@@ -47,4 +47,32 @@ a {
 }
 #botao {
     margin-top: 0px;
+}
+/* RESPONSIVO */
+@media (max-width: 1280px) {
+    ol {margin: 0 15px 0 0;}
+}
+@media (max-width: 1140px) {
+    main {margin: 0% 23%;}
+}
+@media (max-width: 768px) {
+    main {margin: 0% 15%;}
+}
+@media (max-width: 480px) {
+    main {margin: 0% 10%;}
+    h2 {
+        font-size: 20px;
+        margin: 35px 0;
+    }
+    li {font-size: 15px;}
+    #ver-mais {font-size: 16px;}
+}
+@media (max-width: 375px) {
+    main {margin: 0% 8%;}
+    h2 {
+        font-size: 18px;
+        margin: 35px 0;
+    }
+    li {font-size: 13px;}
+    #ver-mais {font-size: 14px;}
 }

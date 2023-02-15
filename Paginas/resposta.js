@@ -101,6 +101,3 @@ function dropdown() {
         dropDown.innerText = "Ver mais";
     }
 }
-
-
-
