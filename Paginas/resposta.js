@@ -56,15 +56,22 @@ function mostrarResultado() {
         let quantidadeNome = document.getElementById('resposta').innerText = "Quantidade de letras do nome completo: " + somarLetras;
         
         /* Calculando a quantidade de caracteres do email. */
-        /* já retira os caracteres antes do '@' e os soma. */
-        let cortarEmail = email.split('@');
-        let semPontos = cortarEmail[1].split('.');
-        let somarCaracteres = cortarEmail[0].length;
+        /* já retira os '.' e monta uma nova string para poder retirar o '@' também  */
+        let cortarEmail = email.split('.');
+        let juntarString = "";
         let j = 0;
-        /* abaixo ele soma os caracteres restantes (após o '@' e sem os '.'). */
-        while (semPontos.length > j) {
-            somarCaracteres += semPontos[j].length;
+        while (cortarEmail.length > j ) {
+            juntarString += cortarEmail[j];
             j++
+        }
+        let semArroba = juntarString.split('@');
+        let somarCaracteres = 0;
+        let g = 0;
+        console.log(semArroba)
+        /* abaixo ele soma os caracteres restantes (após o '@' e sem os '.'). */
+        while (semArroba.length > g) {
+            somarCaracteres += semArroba[g].length;
+            g++
         }
 
         /* Adiciondo uma tag de h2 extra para a resposta dos caracteres de email. */
@@ -100,4 +107,8 @@ function dropdown() {
         const dropDown = document.getElementById('ver-mais');
         dropDown.innerText = "Ver mais";
     }
+}
+/* Botão redireciona ao formulário */
+function redirect() {
+    location.href = "../index.html"
 }

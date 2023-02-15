@@ -39,14 +39,8 @@ ol {
     font-weight: 500;
 }
 /* BOTÃO */
-a {
-    margin-top: 25px;
-    text-align: center;
-    height: 51px;
-    width: 150px;
-}
 #botao {
-    margin-top: 0px;
+    margin-top: 25px;
 }
 /* RESPONSIVO */
 @media (max-width: 1280px) {
@@ -56,7 +50,10 @@ a {
     main {margin: 0% 23%;}
 }
 @media (max-width: 768px) {
-    main {margin: 0% 15%;}
+    main {
+        margin: 0% 15%;
+        align-items: center;
+    }
 }
 @media (max-width: 480px) {
     main {margin: 0% 10%;}
