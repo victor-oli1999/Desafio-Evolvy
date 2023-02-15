@@ -9,7 +9,6 @@ function mostrarResultado() {
     const telefone = data.telefone;
     const email = data.email;
     const numero = data.numero;
-    console.log(nome, telefone, email, numero)
 
     /* Checar qual resultado será mostrado*/
     let textoResposta = "";
@@ -17,15 +16,34 @@ function mostrarResultado() {
         /* O nome completo é separado atraves do método split. */
         /* o espaço em branco é onde a string é cortada.*/
         let primeiroNome = nome.split(' '); 
-        return document.querySelector('h2').innerText = primeiroNome[0];
+
+        /* Ajustando a lista do Dropdown */
+        const li = document.querySelectorAll('li')
+        li[0].setAttribute('class', 'certo')
+        /**/
+
+        return document.querySelector('h2').innerText = "Primeiro Nome: " + primeiroNome[0];
     } else if (numero % 5 === 0) {
         /* Retiro o DDD utilizando o slice. */
         let DDD = telefone.slice(1, 3)
-        return document.querySelector('h2').innerText = DDD;
 
+        /* Ajustando a lista do Dropdown */
+        const li = document.querySelectorAll('li')
+        li[0].setAttribute('class', 'errado')
+        li[1].setAttribute('class', 'certo')
+        /**/
+
+        return document.querySelector('h2').innerText = "DDD: " + DDD;
     } else if (numero % 7 === 0) {
         let dominio = email.split('@'); 
-        return document.querySelector('h2').innerText = dominio[1];
+
+        /* Ajustando a lista do Dropdown */
+        const li = document.querySelectorAll('li')
+        li[0].setAttribute('class', 'errado')
+        li[1].setAttribute('class', 'errado')
+        li[2].setAttribute('class', 'certo')
+        /**/
+        return document.querySelector('h2').innerText = "Dominio do email: " + dominio[1];
     } else {
         /* Calculando a quantidade de letras do nome completo. */
         let cortarNome = nome.split(' '); 
@@ -50,18 +68,39 @@ function mostrarResultado() {
         }
 
         /* Adiciondo uma tag de h2 extra para a resposta dos caracteres de email. */
-        const section = document.getElementById('conteudo');
+        const respostas = document.getElementById('respostas');
         const h2 = document.createElement('h2');
-        section.append(h2)
+        respostas.append(h2)
         h2.setAttribute('id', 'resposta2')
 
         let quantidadeEmail = document.getElementById('resposta2').innerText = "Quantidade de caracteres do email: " + somarCaracteres;
         
+        /* Ajustando a lista do Dropdown */
+        const li = document.querySelectorAll('li')
+        li[0].setAttribute('class', 'errado')
+        li[1].setAttribute('class', 'errado')
+        li[2].setAttribute('class', 'errado')
+        li[3].setAttribute('class', 'certo')
+        li[4].setAttribute('class', 'certo')
+        li[5].setAttribute('class', 'certo')
+        /**/
         return quantidadeNome + quantidadeEmail
-
     }
-    /*return document.querySelector('h2').innerText = textoResposta;*/
+}
+/* Abrir e fechar o dropdown com as perguntas. */
+function dropdown() {
+    const desafios = document.getElementById('desafios')
+
+    if (document.getElementById('ver-mais').innerText === "Ver mais") {
+        desafios.removeAttribute('class', 'none');
+        const dropDown = document.getElementById('ver-mais');
+        dropDown.innerText = "Ver menos";
+    } else {
+        desafios.setAttribute('class', 'none');
+        const dropDown = document.getElementById('ver-mais');
+        dropDown.innerText = "Ver mais";
+    }
 }
 
 
-console.log(data)
+

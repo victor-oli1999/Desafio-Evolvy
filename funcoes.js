@@ -21,7 +21,6 @@ adicionando parenteses ao DDD e o hífen para dividir ao meio.
 const mascaraTelefone = (event) => {
     let input = event.target;
     input.value = mascara(input.value);
-    console.log(input.value)
 } 
 const mascara = (value) => {
     if (!value) return ""
@@ -36,8 +35,7 @@ const mascara = (value) => {
     return value
 }
 
-/**/
-console.log(document.getElementById('nome'))
+/* Salvando os dados do formulário e enviando para a outra págia através de um objeto JSON. */
 function armazenar() {
     const formData = {
         nome: "",
@@ -50,10 +48,4 @@ function armazenar() {
     formData.email = document.getElementById('email').value;
     formData.numero = document.getElementById('numero').value;
     window.localStorage.setItem("local", JSON.stringify(formData));
-}
-
-function retornar() {
-    const data = window.localStorage.getItem('local');
-    const h2 = document.querySelector('h2');
-    console.log(data)
 }
