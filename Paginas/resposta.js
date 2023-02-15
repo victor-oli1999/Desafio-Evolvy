@@ -23,7 +23,7 @@ function mostrarResultado() {
         let DDD = telefone.slice(1, 3)
         return document.querySelector('h2').innerText = DDD;
 
-    } else if (numero % 8 === 0) {
+    } else if (numero % 7 === 0) {
         let dominio = email.split('@'); 
         return document.querySelector('h2').innerText = dominio[1];
     } else {
@@ -48,7 +48,7 @@ function mostrarResultado() {
             somarCaracteres += semPontos[j].length;
             j++
         }
-        
+
         /* Adiciondo uma tag de h2 extra para a resposta dos caracteres de email. */
         const section = document.getElementById('conteudo');
         const h2 = document.createElement('h2');
