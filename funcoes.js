@@ -21,7 +21,7 @@ adicionando parenteses ao DDD e o hífen para dividir ao meio.
 const mascaraTelefone = (event) => {
     let input = event.target;
     input.value = mascara(input.value);
-    console.log(input.value.length)
+    console.log(input.value)
 } 
 const mascara = (value) => {
     if (!value) return ""
@@ -34,4 +34,26 @@ const mascara = (value) => {
     ou entre o quinto e sexto dígito no caso de um telefone celular. */
     value = value.replace(/(\d)(\d{4})$/,"$1-$2")
     return value
+}
+
+/**/
+console.log(document.getElementById('nome'))
+function armazenar() {
+    const formData = {
+        nome: "",
+        telefone: "",
+        email: "",
+        numero: ""
+    };
+    formData.nome = document.getElementById('nome').value;
+    formData.telefone = document.getElementById('telefone').value;
+    formData.email = document.getElementById('email').value;
+    formData.numero = document.getElementById('numero').value;
+    window.localStorage.setItem("local", JSON.stringify(formData));
+}
+
+function retornar() {
+    const data = window.localStorage.getItem('local');
+    const h2 = document.querySelector('h2');
+    console.log(data)
 }
