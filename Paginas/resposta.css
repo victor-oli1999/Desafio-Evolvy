@@ -54,6 +54,7 @@ ol {
         margin: 0% 15%;
         align-items: center;
     }
+    #respostas {padding: 0 3px;}
 }
 @media (max-width: 480px) {
     main {margin: 0% 10%;}
